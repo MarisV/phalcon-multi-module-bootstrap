@@ -8,10 +8,12 @@ $router = new Router();
 $router->setUriSource(Router::URI_SOURCE_SERVER_REQUEST_URI);
 
 $router->setDefaultModule('frontend');
+
+
+
 //
 // +++++ NOT FOUND +++++
 //
-
 $router->notFound(
     array(
         "controller" => "error",

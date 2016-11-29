@@ -17,7 +17,7 @@ use Phalcon\Mvc\Dispatcher as MvcDispatcher;
 class Bootstrap
 {
     /**
-     * Di
+     * Di container
      *
      * @var \Phalcon\DI\FactoryDefault
      */
@@ -45,17 +45,10 @@ class Bootstrap
         return $this->_di;
     }
 
-    private function initConfig()
-    {
-        $di = $this->_di;
-
-        $di->setShared('config', function () {
-            return include APP_PATH . "/config/config.php";
-        });
-    }
-
-
-
+    /**
+     * Register dirs -
+     * init loader service
+     */
     private function initLoader()
     {
         $loader = new Loader();
