@@ -35,7 +35,6 @@ class Bootstrap
 
     public function bootstrap()
     {
-        $this->initConfig();
         $this->initLoader();
         $this->initDb();
         $this->initUrlProvider();
